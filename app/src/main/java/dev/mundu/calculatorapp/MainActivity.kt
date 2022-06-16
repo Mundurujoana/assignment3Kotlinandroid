@@ -33,28 +33,72 @@ class MainActivity : AppCompatActivity() {
         tvResult=findViewById(R.id.tvResult)
 
         btnAdd.setOnClickListener {
-            var num1=etNum1.text.toString().toDouble()
-            var num2=etNum2.text.toString().toDouble()
-            add(num1,num2)
-        }
+            tvResult.text=""
+            var num1=etNum1.text.toString()
+            var num2=etNum2.text.toString()
+                if(num1.isBlank()){
+                    tilNum1.setError("number is required")
+                    return@setOnClickListener
+                }
+
+                if(num2.isBlank()){
+                    tilNum2.setError("number is required")
+                    return@setOnClickListener
+                }
+
+                add(num1.toDouble(),num2.toDouble())
+
+            }
+
 
         btnSubtract.setOnClickListener {
-            var num1=etNum1.text.toString().toDouble()
-            var num2=etNum2.text.toString().toDouble()
-            subtract(num1,num2)
+            var num1=etNum1.text.toString()
+            var num2=etNum2.text.toString()
+            if(num1.isBlank()){
+                tilNum1.setError("number is required")
+                return@setOnClickListener
+            }
+
+            if(num2.isBlank()){
+                tilNum2.setError("number is required")
+                return@setOnClickListener
+            }
+
+        subtract(num1.toDouble(),num2.toDouble())
         }
 
         btnModulus.setOnClickListener {
-            var num1=etNum1.text.toString().toDouble()
-            var num2=etNum2.text.toString().toDouble()
-            modulus(num1,num2)
+            var num1=etNum1.text.toString()
+            var num2=etNum2.text.toString()
+            if(num1.isBlank()){
+                tilNum1.setError("number is required")
+                return@setOnClickListener
+            }
+
+            if(num2.isBlank()){
+                tilNum2.setError("number is required")
+                return@setOnClickListener
+            }
+
+        modulus(num1.toDouble(),num2.toDouble())
         }
 
         btnDivide.setOnClickListener {
-            var num1=etNum1.text.toString().toDouble()
-            var num2=etNum2.text.toString().toDouble()
-            divide(num1,num2)
+            var num1=etNum1.text.toString()
+            var num2=etNum2.text.toString()
+            if(num1.isBlank()){
+                tilNum1.setError("number is required")
+                return@setOnClickListener
+            }
+
+            if(num2.isBlank()){
+                tilNum2.setError("number is required")
+                return@setOnClickListener
+            }
+
+        divide(num1.toDouble(),num2.toDouble())
         }
+
 
     }
     fun add(num1:Double,num2:Double){
@@ -73,4 +117,6 @@ class MainActivity : AppCompatActivity() {
         var total=num1/num2
         tvResult.text=total.toString()
     }
+
+
 }
