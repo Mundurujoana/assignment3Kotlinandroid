@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EDDDDD"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.Guideline
@@ -15,6 +16,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilNum1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -22,7 +24,6 @@
         android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:layout_constraintTop_toTopOf="@+id/guideline2">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -58,7 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-      app:layout_constraintGuide_percent="0.5"/>
+        app:layout_constraintGuide_percent="0.5" />
 
     <Button
         android:id="@+id/btnAdd"
@@ -116,7 +117,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-      app:layout_constraintGuide_percent="0.9" />
+        app:layout_constraintGuide_percent="0.9" />
 
     <TextView
         android:id="@+id/tvResult"
