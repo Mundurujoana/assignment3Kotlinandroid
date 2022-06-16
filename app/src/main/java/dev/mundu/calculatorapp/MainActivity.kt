@@ -37,30 +37,25 @@ class MainActivity : AppCompatActivity() {
             var num1=etNum1.text.toString()
             var num2=etNum2.text.toString()
                 if(num1.isBlank()){
-                    tilNum1.setError("number is required")
+                    tilNum1.setError("Num1 is required")
                     return@setOnClickListener
                 }
-
                 if(num2.isBlank()){
-                    tilNum2.setError("number is required")
+                    tilNum2.setError("Num2 is required")
                     return@setOnClickListener
                 }
-
                 add(num1.toDouble(),num2.toDouble())
-
             }
-
 
         btnSubtract.setOnClickListener {
             var num1=etNum1.text.toString()
             var num2=etNum2.text.toString()
             if(num1.isBlank()){
-                tilNum1.setError("number is required")
+                tilNum1.setError("Num1 is required")
                 return@setOnClickListener
             }
-
             if(num2.isBlank()){
-                tilNum2.setError("number is required")
+                tilNum2.setError("Num2 is required")
                 return@setOnClickListener
             }
 
@@ -71,12 +66,11 @@ class MainActivity : AppCompatActivity() {
             var num1=etNum1.text.toString()
             var num2=etNum2.text.toString()
             if(num1.isBlank()){
-                tilNum1.setError("number is required")
+                tilNum1.setError("Num1 is required")
                 return@setOnClickListener
             }
-
             if(num2.isBlank()){
-                tilNum2.setError("number is required")
+                tilNum2.setError("Num2 is required")
                 return@setOnClickListener
             }
 
@@ -87,36 +81,35 @@ class MainActivity : AppCompatActivity() {
             var num1=etNum1.text.toString()
             var num2=etNum2.text.toString()
             if(num1.isBlank()){
-                tilNum1.setError("number is required")
+                tilNum1.setError("Num1 is required")
                 return@setOnClickListener
             }
-
             if(num2.isBlank()){
-                tilNum2.setError("number is required")
+                tilNum2.setError("Num2 is required")
                 return@setOnClickListener
             }
 
         divide(num1.toDouble(),num2.toDouble())
         }
-
-
     }
+
     fun add(num1:Double,num2:Double){
         var total=num1+num2
         tvResult.text=total.toString()
     }
+
     fun subtract(num1:Double,num2:Double){
         var total=num1-num2
         tvResult.text=total.toString()
     }
+
     fun modulus(num1:Double,num2:Double){
         var total=num1%num2
         tvResult.text=total.toString()
     }
+
     fun divide(num1:Double,num2:Double){
         var total=num1/num2
         tvResult.text=total.toString()
     }
-
-
 }
